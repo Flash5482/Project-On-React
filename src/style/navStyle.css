@@ -1,0 +1,40 @@
+
+.nav {
+    grid-area: nav;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav {
+    color: white;
+    font-size: 16pt;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    width: 100%;
+}
+
+.nav div:first-child {
+    margin-top: 60px;
+}
+
+.main-menu div {
+    transition: all 500ms;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px 5px 0 3px;
+    padding: 10px;
+
+}
+.main-menu div:hover {
+
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0;
+
+
+
+}
