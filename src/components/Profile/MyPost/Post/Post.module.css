@@ -1,0 +1,26 @@
+.post {
+    margin: 60px 0 30px 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 20px solid aqua;
+    background: #1d9999;
+}
+
+.item {
+    display: flex;
+    font-size: 20pt;
+    color: aqua;
+}
+
+ p .s {
+    display: block;
+    width: 690px;
+    text-align: justify;
+    line-height: 32px;
+    letter-spacing: 1px;
+    margin: 0 0 0 20px;
+}
