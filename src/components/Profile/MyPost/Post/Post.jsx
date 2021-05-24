@@ -8,10 +8,7 @@ const Post = (props) => {
         <div className={Styles.post}>
             <div className={Styles.item}>
                 <div className={Styles.avatar}></div>
-                <p>
-                   <div className={Styles.s}>{props.mess}</div>
-
-                </p>
+                <div className={Styles.s}>{props.post}</div>
                 <div className={Styles.like}>Like {props.countLike}</div>
 
             </div>

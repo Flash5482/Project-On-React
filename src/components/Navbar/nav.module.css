@@ -12,13 +12,24 @@
     width: 100%;
 
 }
+ a.active{
 
 
-.nav div:first-child {
-    margin-top: 60px;
 }
+ .main__menu a.active{
+     color: white;
+     background: #000;
 
+ }
+
+.main__menu{
+   margin: 60px 0 0 0;
+}
+.link{
+    color: aqua;
+}
 .main__menu div {
+
     transition: all 500ms;
     background: rgba(0, 0, 0, 0.5);
     margin: 20px 5px 0 3px;
