@@ -16,10 +16,10 @@ function App(props) {
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
-                <Navbar/>
+                <Navbar state={props.appState.navbar}/>
                 <div className="app-wrapper__content">
-                    <Route path="/message" render={() => <Dialogs arrayDialogsData={props.arrayDialogsData} arrayDMessagesData={props.arrayMessagesData}/>}/>
-                    <Route path="/profile" render={() => <Profile arrayPostData={props.arrayPostData}/>}/>
+                    <Route path="/message" render={() => <Dialogs state={props.appState.messagePage}/>}/>
+                    <Route path="/profile" render={() => <Profile state={props.appState.profilePage}/>}/>
                     <Route path="/news" component={News}/>
                     <Route path="/music" component={Music}/>
                     <Route path="/settings" component={Settings}/>

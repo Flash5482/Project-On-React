@@ -8,7 +8,7 @@ const Profile = (props) => {
     return (
         <div className={Styles.content}>
             <ProfileInfo/>
-            <MyPost arrayPostData={props.arrayPostData}/>
+            <MyPost postData={props.state.postData}/>
 
         </div>
     );

@@ -1,7 +1,13 @@
 import React from "react";
 import Styles from './MyPost.module.css';
+import Post from "./Post/Post";
 
 const MyPost = (props) => {
+
+    let newPostData =
+        props.postData.map(item => {
+            return (<Post post={item.message} countLike={item.likesCount}/>)
+        });
     return (
         <div className={Styles.main_input}>
             <h1>My post</h1>
@@ -10,7 +16,7 @@ const MyPost = (props) => {
                 </textarea>
                 <button className={Styles.button}>Create</button>
             </div>
-            {props.arrayPostData}
+            {newPostData}
         </div>
     );
 }
