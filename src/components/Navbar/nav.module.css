@@ -2,39 +2,50 @@
 .nav {
     grid-area: nav;
     background: rgba(0, 0, 0, 0.8);
-    margin: 10px 10px 0 0;
-    display: flex;
     justify-content: center;
-
-}
-
-.nav {
-    color: white;
+    color: aqua;
     font-size: 16pt;
     text-align: center;
-    margin-top: 20px;
     font-weight: 700;
     letter-spacing: 2px;
     display: block;
     width: 100%;
-}
 
-.nav div:first-child {
-    margin-top: 60px;
 }
+ a.active{
 
-.main-menu div {
+
+}
+ .main__menu a.active{
+     color: white;
+     background: #000;
+
+ }
+
+.main__menu{
+   margin: 60px 0 0 0;
+}
+.link{
+    color: aqua;
+}
+.main__menu div {
+
     transition: all 500ms;
     background: rgba(0, 0, 0, 0.5);
     margin: 20px 5px 0 3px;
     padding: 10px;
 
 }
-.main-menu div:hover {
 
+.main__menu div:hover {
     background: rgba(0, 0, 0, 0.8);
     margin: 20px 0 0 0;
-
-
-
+}
+.friends{
+    margin: 100px 0 50px 0;
+}
+.friends .title{
+    font-size: 30pt;
+    font-weight: 700;
+    letter-spacing: 5px;
 }
