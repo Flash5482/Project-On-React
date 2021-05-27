@@ -13,16 +13,23 @@ const Dialogs = (props) => {
         props.state.messagesData.map(item => {
             return (<Message message={item.message} id={item.id}/>);
         });
+    let newMessage = React.createRef();
+    let mes = ()=> {
+        let message =  newMessage.current.value;
+        alert(message);
+    }
     return (
         <div className={Styles.dialogs}>
             <div className={Styles.dialogs__item}>
                 {newDialogsData}
-
-
             </div>
             <div className={Styles.messeges}>
                 {newMessageData}
+                <textarea ref={newMessage} className={Styles.input__text} name="" id="" cols="30" rows="2">
+                </textarea>
+                <button onClick={mes} className={Styles.button}>Send</button>
             </div>
+
         </div>
     );
 }
