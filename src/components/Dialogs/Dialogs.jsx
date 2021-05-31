@@ -6,17 +6,21 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
     let newDialogsData =
-        props.state.dialogsData.map(item => {
+        props.messagePage.dialogsData.map(item => {
             return (<Dialog name={item.name} id={item.id}/>);
         });
     let newMessageData =
-        props.state.messagesData.map(item => {
+        props.messagePage.messagesData.map(item => {
             return (<Message message={item.message} id={item.id}/>);
         });
+
     let newMessage = React.createRef();
-    let mes = ()=> {
-        let message =  newMessage.current.value;
-        alert(message);
+    let mes = () => {
+        props.dispatch({type:'ADD-MESSAGE'});
+    }
+    let newMessages = ()=>{
+        let text = newMessage.current.value;
+        props.dispatch({type:'CHANGE-NEW-MESSAGE',newMessage: text});
     }
     return (
         <div className={Styles.dialogs}>
@@ -25,8 +29,8 @@ const Dialogs = (props) => {
             </div>
             <div className={Styles.messeges}>
                 {newMessageData}
-                <textarea ref={newMessage} className={Styles.input__text} name="" id="" cols="30" rows="2">
-                </textarea>
+                <textarea onChange={newMessages} ref={newMessage} value={props.messagePage.newMessage} className={Styles.input__text} name="" id="" cols="30" rows="2"/>
+
                 <button onClick={mes} className={Styles.button}>Send</button>
             </div>
 
