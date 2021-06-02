@@ -1,8 +1,7 @@
 import React from "react";
 import Styles from './MyPost.module.css';
 import Post from "./Post/Post";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/state";
-
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profileReducer";
 
 
 const MyPost = (props) => {
@@ -10,7 +9,6 @@ const MyPost = (props) => {
         props.profilePage.postData.map(item => {
             return (<Post post={item.message} countLike={item.likesCount}/>)
         });
-
     let newPostElement = React.createRef();
 
     let addPosts = () => {

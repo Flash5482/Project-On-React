@@ -18,13 +18,12 @@ function App(props) {
                 <Header/>
 
                 <Navbar state={props.appState.navbar}/>
-
                 <div className="app-wrapper__content">
                     <Route path="/message" render={() => <Dialogs messagePage={props.appState.messagePage}
                                                                   dispatch={props.dispatch}/>}/>
                     <Route path="/profile"
                            render={() => <Profile profilePage={props.appState.profilePage}
-                                                    dispatch ={props.dispatch}/>}/>
+                                                  dispatch={props.dispatch}/>}/>
                     <Route path="/news" component={News}/>
                     <Route path="/music" component={Music}/>
                     <Route path="/settings" component={Settings}/>
