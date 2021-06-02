@@ -2,3 +2,33 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
+.input__text{
+    background: none;
+    color: aqua;
+    border: aqua 2px solid;
+    margin: 30px 0 30px 0;
+    width: 600px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.input__text:focus{
+    box-shadow: 0 0 10px aqua;
+}
+.button{
+    transition: 500ms;
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    margin-left: -150px;
+    background: #1d9999;
+    box-shadow: 0 0 5px aqua;
+    color: white;
+    font-weight: 700;
+    font-size: 14pt;
+}
+.button:hover{
+    box-shadow: 0 0 10px aqua;
+    background: aqua;
+    color: black;
+}
