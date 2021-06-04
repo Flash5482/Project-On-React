@@ -12,10 +12,7 @@
     width: 100%;
 
 }
- a.active{
 
-
-}
  .main__menu a.active{
      color: white;
      background: #000;

@@ -6,7 +6,7 @@ import navbarReducer from "./navbarReducer";
 const {createStore} = require("redux");
 
 let reducers = combineReducers({
-    profilePages: profileReducer,
+    profilePage: profileReducer,
     messagePage: dialogsReducer,
     navbar: navbarReducer
 });
