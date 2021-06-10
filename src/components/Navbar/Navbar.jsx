@@ -5,7 +5,7 @@ import Friends from "./Friends/Friends";
 
 const Navbar = (props) => {
     let newFriendsData =
-        props.state.friendsData.map(item =>{
+        props.friendsData.map(item =>{
             return ( <Friends name={item.name}  img={item.img}/>);
     });
     return (
@@ -22,6 +22,9 @@ const Navbar = (props) => {
                 </NavLink>
                 <NavLink className={Styles.link} to="/music" activeClassName={Styles.active}>
                     <div className={Styles.item}>Music</div>
+                </NavLink>
+                <NavLink className={Styles.link} to="/users" activeClassName={Styles.active}>
+                    <div className={Styles.item}>Find people</div>
                 </NavLink>
                 <NavLink className={Styles.link} to="/settings" activeClassName={Styles.active}>
                     <div className={Styles.item}>Settings</div>
