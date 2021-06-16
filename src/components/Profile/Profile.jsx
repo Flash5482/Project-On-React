@@ -1,16 +1,13 @@
 import React from "react";
 import Styles from './profile.module.css'
-import Avatar from '../../img/avatar.png';
-import MyPost from "./MyPost/MyPost";
 import ProfileInfo from "./ProfileInfo";
 import MyPostContainer from "./MyPost/MyPostContainer";
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div className={Styles.content}>
-            <ProfileInfo/>
+            <ProfileInfo profile={props.profile}/>
             <MyPostContainer/>
-
         </div>
     );
 }

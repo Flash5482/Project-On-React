@@ -12,3 +12,40 @@
 .logo img{
     width: 100%;
 }
+.loginBlock{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loginName{
+    text-decoration: none;
+    font-size: 20pt;
+    color: white;
+    z-index: 2;
+    margin: -40px 40px 0 0;
+}
+.text{
+    font-size: 20pt;
+    color: white;
+    z-index: 2;
+    margin: -40px 0 0 0;
+    transition: 300ms;
+}
+.text:hover{
+    color: aqua;
+
+}
+.headerPhoto{
+    width: 50px;
+    height: 50px;
+    background: aqua;
+    border-radius: 50%;
+    margin: -50px 20px 0 0 ;
+}
+.headerPhoto img{
+    width: 100%;
+    transition: 300ms;
+}
+.headerPhoto img:hover{
+    transform: scale(1.1,1.1);
+}

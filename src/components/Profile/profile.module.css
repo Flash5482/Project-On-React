@@ -3,6 +3,10 @@
     background: rgba(0, 0, 0, 0.9);
     grid-area: content;
 }*/
+.spinner{
+    display: flex;
+    justify-content: center;
+}
 
 .main__image {
     width: 100%;

@@ -1,8 +1,12 @@
 import React from "react";
 import Styles from './profile.module.css';
 import Avatar from "../../img/avatar.png";
+import Spinner from '../../img/Spinner-1s-200px.svg'
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+    if (!props.profile) {
+        return <div className={Styles.spinner}> <img src={Spinner}/></div>
+    }
     return (
         <div>
             <div className={Styles.main__image}>
@@ -13,11 +17,11 @@ const ProfileInfo = () => {
 
             <div className={Styles.information}>
                 <div className={Styles.avatar}>
-                    <img src={Avatar} alt=""/>
+                    <img src={props.profile.photos.small != null ? props.profile.photos.small : Avatar} alt=""/>
                 </div>
                 <div className={Styles.description}>
                     <ul className={Styles.list}>
-                        <li>Ricki Nortino</li>
+                        <li>{props.profile.fullName != null ? props.profile.fullName : "Rick Mortino"}</li>
                         <li className={Styles.item__bar}>
                             <div className={Styles.point}></div>
                         </li>

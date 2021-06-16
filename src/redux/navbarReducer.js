@@ -17,10 +17,13 @@ let initialState = {
             img: "https://cdn.theatlantic.com/thumbor/cTP7DsiUyI81zFg8c-FDnIoCBhA=/540x0:2340x1800/540x540/media/img/mt/2016/01/superman/original.jpg"
         }
     ]
+
 }
 
-const navbarReducer = (state = initialState,action)=>{
+const navbarReducer = (state = initialState) => {
+
     return state;
+
 }
 
-export  default navbarReducer;
+export default navbarReducer;
