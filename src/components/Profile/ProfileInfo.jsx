@@ -2,6 +2,7 @@ import React from "react";
 import Styles from './profile.module.css';
 import Avatar from "../../img/avatar.png";
 import Spinner from '../../img/Spinner-1s-200px.svg'
+import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -14,7 +15,7 @@ const ProfileInfo = (props) => {
                      src="https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
                      alt=""/>
             </div>
-
+            <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
             <div className={Styles.information}>
                 <div className={Styles.avatar}>
                     <img src={props.profile.photos.small != null ? props.profile.photos.small : Avatar} alt=""/>

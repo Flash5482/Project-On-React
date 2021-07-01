@@ -1,7 +1,6 @@
 import React from "react";
 import Styles from './Styles.module.css'
 import {NavLink} from "react-router-dom";
-import {followUser, unFollowUser} from "../../../api/api";
 
 const User = (props) => {
 
@@ -32,21 +31,15 @@ const User = (props) => {
                         </div>
                         <div className={Styles.button}>
                             {item.followed
-                                ? <button onClick={() => {
-                                    unFollowUser(item.id).then(response => {
-                                        if (response.resultCode === 0) {
-                                            props.unFollow(item.id)
-                                        }
-                                    });
-                                }}>Unfollow</button>
+                                ? <button disabled={props.state.followingInProgress.some(id => id === item.id)}
+                                          onClick={() => {
+                                              props.unfollow(item.id);
+                                          }}>Unfollow</button>
 
-                                : <button onClick={() => {
-                                    followUser(item.id).then(response => {
-                                        if (response.resultCode === 0) {
-                                            props.follows(item.id)
-                                        }
-                                    });
-                                }}>Follow</button>
+                                : <button disabled={props.state.followingInProgress.some(id => id === item.id)}
+                                          onClick={() => {
+                                              props.follow(item.id);
+                                          }}>Follow</button>
                             }
                         </div>
                     </div>

@@ -85,3 +85,12 @@
         left: 94%;
     }
 }
+
+.textStatus{
+    font-size: 20pt;
+    color: white;
+}
+.textStatus input{
+    font-size: 20pt;
+    color: black;
+}

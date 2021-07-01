@@ -1,0 +1,34 @@
+.textInput{
+    background: none;
+    color: aqua;
+    border: aqua 2px solid;
+    margin: 30px 0 30px 30px;
+    width: 800px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.textInput:focus{
+    box-shadow: 0 0 10px aqua;
+}
+.formControl.error input,
+.formControl.error textarea {
+    border: solid 2px red;
+}
+
+.formControl.error span{
+    color: red;
+}
+
+.inputLogin{
+    border-radius: 5px;
+    border: solid 2px #07b7b7;
+    width: 400px;
+    height: 30px;
+    margin: 20px;
+    padding: 5px;
+    transition: 500ms;
+}
+.inputLogin:focus{
+    box-shadow: 0  0 10px aqua;
+}

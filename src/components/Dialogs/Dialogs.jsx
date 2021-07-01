@@ -2,7 +2,7 @@ import React from "react";
 import Styles from './Dialogs.module.css';
 import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
-
+import {MessageReduxForm} from "./AddMessageForm";
 
 const Dialogs = (props) => {
 
@@ -16,14 +16,13 @@ const Dialogs = (props) => {
         });
 
 
-    let newMessage = React.createRef();
-    let mes = () => {
-        props.addMessage();
+    let newMessages = (values) => {
+        let text = values.newMessageBody;
+        props.addMessageActionCreator(text);
+
     }
-    let newMessages = () => {
-        let text = newMessage.current.value;
-        props.newMessageText(text);
-    }
+
+
     return (
         <div className={Styles.dialogs}>
             <div className={Styles.dialogs__item}>
@@ -31,10 +30,7 @@ const Dialogs = (props) => {
             </div>
             <div className={Styles.messeges}>
                 {newMessageData}
-                <textarea onChange={newMessages} ref={newMessage} value={props.messagePage.newMessage}
-                          className={Styles.input__text} name="" id="" cols="30" rows="2"/>
-
-                <button onClick={mes} className={Styles.button}>Send</button>
+                <MessageReduxForm onSubmit={newMessages}/>
             </div>
 
         </div>
